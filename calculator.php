@@ -11,12 +11,13 @@ $fillArray->fillUniversity($ELTE);
 $fillArray->fillUniversity($PPKE);
 
 $dataManipulation = new dataManipulation($exampleData);
-$dataManipulation->basicPointsCalculation($fillArray) . "\n";
+$dataManipulation->basicPointsCalculation($fillArray);
+
 $dataManipulation = new dataManipulation($exampleData4);
-$dataManipulation->basicPointsCalculation($fillArray) . "\n";
+$dataManipulation->basicPointsCalculation($fillArray);
 $dataManipulation = new dataManipulation($exampleData2);
-$dataManipulation->basicPointsCalculation($fillArray) . "\n";
+$dataManipulation->basicPointsCalculation($fillArray);
 $dataManipulation = new dataManipulation($exampleData3);
-$dataManipulation->basicPointsCalculation($fillArray) . "\n";
+$dataManipulation->basicPointsCalculation($fillArray);
 
 
