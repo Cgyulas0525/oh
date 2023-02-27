@@ -11,6 +11,7 @@ class dataManipulation
     private $chosenUniversity;
     private $basicPoint = 0;
     private $extraPoint = 0;
+    private $result = '';
 
     function __construct($item, $name) {
         $this->item = $item;
@@ -66,7 +67,7 @@ class dataManipulation
     function examAudit() {
         foreach( $this->fillArray->compulsoryExaminations as $compulsoryExamination) {
             if (array_search($compulsoryExamination, $this->subjectsArray) === false) {
-                echo $this->name . ': hiba, nem lehetséges a pontszámítás a kötelező érettségi tárgyak hiánya miatt' . "\n";
+                $this->result .= $this->name . ': hiba, nem lehetséges a pontszámítás a kötelező érettségi tárgyak hiánya miatt' . "\n";
                 return false;
             }
         }
@@ -115,7 +116,7 @@ class dataManipulation
     function resultMoreThen20() {
         foreach($this->graduationResults as $graduationResult) {
             if( intVal($graduationResult['eredmeny']) < 20 ) {
-                echo $this->name . ': hiba, nem lehetséges a pontszámítás a ' . $graduationResult['nev'] . ' tárgyból elért 20% alatti eredmény miatt' . "\n";
+                $this->result .= $this->name . ': hiba, nem lehetséges a pontszámítás a ' . $graduationResult['nev'] . ' tárgyból elért 20% alatti eredmény miatt' . "\n";
                 return false;
             }
         }
@@ -258,8 +259,8 @@ class dataManipulation
             }
         }
         if (($this->basicPoint + $this->extraPoint) > 0) {
-            echo $this->name . ': ' . ($this->basicPoint + $this->extraPoint) . ' (' . $this->basicPoint . ' alappont + '. $this->extraPoint . ' többletpont)' . "\n";
+            $this->result .= $this->name . ': ' . ($this->basicPoint + $this->extraPoint) . ' (' . $this->basicPoint . ' alappont + '. $this->extraPoint . ' többletpont)' . "\n";
         }
-        return $this->basicPoint + $this->extraPoint;
+        return $this->result;
     }
 }

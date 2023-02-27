@@ -17,7 +17,7 @@ $fillArray->fillUniversity($PPKE);
 
 foreach ($exampleArray as $examp) {
     $dataManipulation = new dataManipulation($examp['data'], $examp["name"]);
-    $dataManipulation->basicPointsCalculation($fillArray);
+    echo $dataManipulation->basicPointsCalculation($fillArray);
 }
 
 
