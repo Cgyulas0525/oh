@@ -9,7 +9,7 @@ include PATH_DATA . "/universityData.php";
 $exampleArray = [[ "data" => $exampleData, "name" => "exampleData" ],
                  [ "data" => $exampleData4, "name" => "exampleData4" ],
                  [ "data" => $exampleData2, "name" => "exampleData2" ],
-                 [ "data" => $exampleData3,  "name" => "exampleData3"]];
+                 [ "data" => $exampleData3, "name" => "exampleData3" ]];
 
 $fillArray = new FillArray();
 $fillArray->fillUniversity($ELTE);
