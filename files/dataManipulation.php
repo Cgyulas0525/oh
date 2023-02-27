@@ -232,7 +232,7 @@ class dataManipulation
             return 100;
         }
 
-        return $this->languageExam($point);;
+        return $this->languageExam($point);
     }
 
     /**
