@@ -6,18 +6,20 @@ require PATH_FILES . "/fillArray.php";
 include PATH_DATA . "/data.php";
 include PATH_DATA . "/universityData.php";
 
+$exampleArray = [[ "data" => $exampleData, "name" => "exampleData" ],
+                 [ "data" => $exampleData4, "name" => "exampleData4" ],
+                 [ "data" => $exampleData2, "name" => "exampleData2" ],
+                 [ "data" => $exampleData3,  "name" => "exampleData3"]];
+
 $fillArray = new FillArray();
 $fillArray->fillUniversity($ELTE);
 $fillArray->fillUniversity($PPKE);
 
-$dataManipulation = new dataManipulation($exampleData);
-$dataManipulation->basicPointsCalculation($fillArray);
+foreach ($exampleArray as $examp) {
+    $dataManipulation = new dataManipulation($examp['data'], $examp["name"]);
+    $dataManipulation->basicPointsCalculation($fillArray);
+}
 
-$dataManipulation = new dataManipulation($exampleData4);
-$dataManipulation->basicPointsCalculation($fillArray);
-$dataManipulation = new dataManipulation($exampleData2);
-$dataManipulation->basicPointsCalculation($fillArray);
-$dataManipulation = new dataManipulation($exampleData3);
-$dataManipulation->basicPointsCalculation($fillArray);
+
 
 
