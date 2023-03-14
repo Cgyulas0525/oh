@@ -11,6 +11,8 @@ $exampleArray = [[ "data" => $exampleData, "name" => "exampleData" ],
                  [ "data" => $exampleData2, "name" => "exampleData2" ],
                  [ "data" => $exampleData3, "name" => "exampleData3" ]];
 
+//ide írtam vmit...
+
 $fillArray = new FillArray();
 $fillArray->fillUniversity($ELTE);
 $fillArray->fillUniversity($PPKE);
