@@ -11,7 +11,9 @@ $exampleArray = [[ "data" => $exampleData, "name" => "exampleData" ],
                  [ "data" => $exampleData2, "name" => "exampleData2" ],
                  [ "data" => $exampleData3, "name" => "exampleData3" ]];
 
-//ide írtam vmit...
+$vmi = 'Ide írtam valamit...';
+echo $vmi;
+
 
 $fillArray = new FillArray();
 $fillArray->fillUniversity($ELTE);
