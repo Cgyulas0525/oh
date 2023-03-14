@@ -12,7 +12,8 @@ $exampleArray = [[ "data" => $exampleData, "name" => "exampleData" ],
                  [ "data" => $exampleData3, "name" => "exampleData3" ]];
 
 $vmi = 'Ide írtam valamit... és még valamit, de nem sokat, mert nem ez a lényeg!';
-echo $vmi;
+$vmimas = 'Ez ujabb próbálkozás....';
+echo $vmi . " " . $vmimas . "\n";
 
 
 $fillArray = new FillArray();
