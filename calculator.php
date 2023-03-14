@@ -11,7 +11,7 @@ $exampleArray = [[ "data" => $exampleData, "name" => "exampleData" ],
                  [ "data" => $exampleData2, "name" => "exampleData2" ],
                  [ "data" => $exampleData3, "name" => "exampleData3" ]];
 
-$vmi = 'Ide írtam valamit...';
+$vmi = 'Ide írtam valamit... és még valamit, de nem sokat, mert nem ez a lényeg!';
 echo $vmi;
 
 
